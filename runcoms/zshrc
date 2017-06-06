@@ -14,19 +14,15 @@ fi
 
 # setup all the paths
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
-export JAVA_1_7_HOME=/usr/java/jdk1.7.0_latest
-export JAVA_1_8_HOME=/usr/java/jdk1.8.0_latest
+export JAVA_1_7_HOME="$(/usr/libexec/java_home -v 1.7)"
+export JAVA_1_8_HOME="$(/usr/libexec/java_home -v 1.8)"
 export PALANTIR_JAVA_HOME=$JAVA_1_8_HOME
-export JAVA_HOME=$JAVA_1_7_HOME
+export JAVA_HOME=$JAVA_1_8_HOME
 export NODE_PATH=/usr/local/lib/node:/Users/wmanning/.node/lib/node_modules
 export PATH=$HOME/.node/bin:/usr/local/share/npm/bin:/usr/local/bin:$PATH
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
 export WORKON_HOME=$HOME/.virtualenvs
-
-# docker
-export DOCKER_TLS_VERIFY=1
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/wmanning/.boot2docker/certs/boot2docker-vm
+export GRADLE_USER_HOME=/Volumes/git/.gradle
 
 # less is more
 export GIT_PAGER='less -r'
@@ -38,8 +34,9 @@ alias ll='ls -ltr'
 alias tarz='tar -czvf'
 alias untarz='tar -xzvf'
 alias glog='git log --pretty=oneline -n 10'
-alias eubas='ssh -YC wmanning@bastion1-eu.palantircloud.com'
-alias tawny='ssh tawnyproxy'
+alias gw='./gradlew'
 
 # homebrew autocompletion
 source /usr/local/bin/virtualenvwrapper.sh
+source /Users/wmanning/.iterm2_shell_integration.`basename $SHELL`
+source /usr/local/dev-env/bin/profile
