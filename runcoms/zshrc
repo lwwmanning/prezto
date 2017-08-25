@@ -37,6 +37,4 @@ alias glog='git log --pretty=oneline -n 10'
 alias gw='./gradlew'
 
 # homebrew autocompletion
-source /usr/local/bin/virtualenvwrapper.sh
 source /Users/wmanning/.iterm2_shell_integration.`basename $SHELL`
-source /usr/local/dev-env/bin/profile
