@@ -14,14 +14,12 @@ fi
 
 # setup all the paths
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
-export JAVA_1_7_HOME="$(/usr/libexec/java_home -v 1.7)"
 export JAVA_1_8_HOME="$(/usr/libexec/java_home -v 1.8)"
-export PALANTIR_JAVA_HOME=$JAVA_1_8_HOME
+export JAVA_1_11_HOME="$(/usr/libexec/java_home -v 1.11)"
 export JAVA_HOME=$JAVA_1_8_HOME
-export NODE_PATH=/usr/local/lib/node:/Users/wmanning/.node/lib/node_modules
+export NODE_PATH=/usr/local/lib/node:$HOME/.node/lib/node_modules
 export PATH=/usr/local/share/npm/bin:/usr/local/bin:$PATH
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
-export WORKON_HOME=$HOME/.virtualenvs
 
 # probably no longer necessary
 # export GRADLE_USER_HOME=/Volumes/git/.gradle
@@ -39,4 +37,4 @@ alias glog='git log --pretty=oneline -n 10'
 alias gw='./gradlew'
 
 # homebrew autocompletion
-source /Users/wmanning/.iterm2_shell_integration.`basename $SHELL`
+#source $HOME/.iterm2_shell_integration.`basename $SHELL`
