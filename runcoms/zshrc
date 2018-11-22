@@ -20,8 +20,14 @@ export JAVA_HOME=$JAVA_1_8_HOME
 export NODE_PATH=/usr/local/lib/node:$HOME/.node/lib/node_modules
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/share/npm/bin:$PATH"
 
+export GOPATH=/Volumes/git/go
+export PATH=$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin
+
+export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
+export GRADLE_OPTS="-Djavax.net.ssl.trustStore=$(/usr/libexec/java_home)/jre/lib/security/cacerts -Djavax.net.ssl.trustStorePassword=changeit -Djavax.net.ssl.keyStore=$(/usr/libexec/java_home)/jre/lib/security/cacerts -Djavax.net.ssl.keyStorePassword=changeit"
+
 # probably no longer necessary
-# export GRADLE_USER_HOME=/Volumes/git/.gradle
+export GRADLE_USER_HOME=/Volumes/git/.gradle
 
 # less is more
 export GIT_PAGER='less -r'
