@@ -29,6 +29,9 @@ export GRADLE_OPTS="-Djavax.net.ssl.trustStore=$(/usr/libexec/java_home)/lib/sec
 # probably no longer necessary
 export GRADLE_USER_HOME=/Volumes/git/.gradle
 
+export KEYID=0xD497AC50D757F1F4
+export GNUPGHOME=/Volumes/pgp
+
 # less is more
 export GIT_PAGER='less -r'
 export GIT_NOTES_REF=refs/notes/web-backports
