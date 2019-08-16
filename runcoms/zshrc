@@ -27,7 +27,10 @@ export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
 export GRADLE_OPTS="-Djavax.net.ssl.trustStore=$(/usr/libexec/java_home)/lib/security/cacerts -Djavax.net.ssl.trustStorePassword=changeit -Djavax.net.ssl.keyStore=$(/usr/libexec/java_home)/lib/security/cacerts -Djavax.net.ssl.keyStorePassword=changeit"
 
 # probably no longer necessary
-export GRADLE_USER_HOME=/Volumes/git/.gradle
+if [ -d "/Volumes/git" ]
+then
+    export GRADLE_USER_HOME=/Volumes/git/.gradle
+fi
 
 export KEYID=0xD497AC50D757F1F4
 export GNUPGHOME=/Volumes/pgp
