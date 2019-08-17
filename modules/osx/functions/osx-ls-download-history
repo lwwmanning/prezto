@@ -1,11 +1,9 @@
 #
-# Displays the macOS download history.
+# Displays the Mac OS X download history.
 #
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
-
-# function osx-ls-download-history {
 
 local db
 for db in ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV*; do
@@ -13,5 +11,3 @@ for db in ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV*; do
     sqlite3 "$db" 'SELECT LSQuarantineDataURLString FROM LSQuarantineEvent'
   fi
 done
-
-# }

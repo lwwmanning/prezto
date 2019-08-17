@@ -1,11 +1,9 @@
 #
-# Deletes the macOS download history.
+# Deletes the Mac OS X download history.
 #
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
-
-# function osx-rm-download-history {
 
 local db
 for db in ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV*; do
@@ -13,5 +11,3 @@ for db in ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV*; do
     sqlite3 "$db" 'DELETE FROM LSQuarantineEvent; VACUUM'
   fi
 done
-
-# }

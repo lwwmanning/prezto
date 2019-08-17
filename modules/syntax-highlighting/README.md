@@ -3,14 +3,9 @@ Syntax Highlighting
 
 Integrates [zsh-syntax-highlighting][1] into Prezto.
 
-This module should be loaded before the *prompt* module.
-
-Additionally, if this module is used in conjunction with the
-*history-substring-search* module, this module must be loaded **before** the
-*history-substring-search* module.
-
-To elaborate: The relative order of loading the modules would be 
-'syntax-highlighting', 'history-substring-search' and 'prompt'.
+This module should be loaded *second to last*, where last is the *prompt*
+module, unless used in conjuncture with the *history-substring-search* module
+where it must be loaded **before** it.
 
 Contributors
 ------------
@@ -27,9 +22,7 @@ Settings
 To enable highlighting for this module only, add the following line to
 *zpreztorc*:
 
-```sh
-zstyle ':prezto:module:syntax-highlighting' color 'yes'
-```
+    zstyle ':prezto:module:syntax-highlighting' color 'yes'
 
 ### Highlighters
 
@@ -38,15 +31,12 @@ only enables the *main* highlighter by default.
 
 To enable all highlighters, add the following to *zpreztorc*:
 
-```sh
-zstyle ':prezto:module:syntax-highlighting' highlighters \
-  'main' \
-  'brackets' \
-  'pattern' \
-  'line' \
-  'cursor' \
-  'root'
-```
+    zstyle ':prezto:module:syntax-highlighting' highlighters \
+      'main' \
+      'brackets' \
+      'pattern' \
+      'cursor' \
+      'root'
 
 ### Highlighting Styles
 
@@ -55,12 +45,10 @@ Each syntax highlighter defines styles used to highlight tokens.
 To highlight, for example, builtins, commands, and functions in blue instead of
 green, add the following to *zpreztorc*:
 
-```sh
-zstyle ':prezto:module:syntax-highlighting' styles \
-  'builtin' 'bg=blue' \
-  'command' 'bg=blue' \
-  'function' 'bg=blue'
-```
+    zstyle ':prezto:module:syntax-highlighting' styles \
+      'builtin' 'bg=blue' \
+      'command' 'bg=blue' \
+      'function' 'bg=blue'
 
 Authors
 -------
