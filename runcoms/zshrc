@@ -15,8 +15,9 @@ fi
 # setup all the paths
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 export JAVA_1_8_HOME="$(/usr/libexec/java_home -v 1.8)"
-export JAVA_1_11_HOME="$(/usr/libexec/java_home -v 11)"
-export JAVA_HOME=$JAVA_1_11_HOME
+export JAVA_11_HOME="$(/usr/libexec/java_home -v 11)"
+export JAVA_13_HOME="$(/usr/libexec/java_home -v 13)"
+export JAVA_HOME=$JAVA_11_HOME
 export NODE_PATH=/usr/local/lib/node:$HOME/.node/lib/node_modules
 export PATH="$HOME/.cargo/bin:$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/share/npm/bin:$PATH"
 
