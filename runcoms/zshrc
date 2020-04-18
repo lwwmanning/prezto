@@ -34,7 +34,7 @@ then
 fi
 
 export KEYID=0xD497AC50D757F1F4
-export GNUPGHOME=/Volumes/pgp
+#export GNUPGHOME=/Volumes/pgp
 
 # less is more
 export GIT_PAGER='less -r'
