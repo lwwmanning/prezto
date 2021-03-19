@@ -17,6 +17,7 @@ export GROOVY_HOME=/usr/local/opt/groovy/libexec
 export JAVA_1_8_HOME="$(/usr/libexec/java_home -v 1.8)"
 export JAVA_11_HOME="$(/usr/libexec/java_home -v 11)"
 export JAVA_15_HOME="$(/usr/libexec/java_home -v 15)"
+export JAVA_16_HOME="$(/usr/libexec/java_home -v 16)"
 export JAVA_HOME=$JAVA_11_HOME
 export NODE_PATH=/usr/local/lib/node:$HOME/.node/lib/node_modules
 export PATH="$HOME/.cargo/bin:$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/share/npm/bin:$PATH"
@@ -47,6 +48,7 @@ alias tarz='tar -czvf'
 alias untarz='tar -xzvf'
 alias glog='git log --pretty=oneline -n 10'
 alias gw='./gradlew'
+alias slogs='slslog --only=service.1'
 
 # homebrew autocompletion
 #source $HOME/.iterm2_shell_integration.`basename $SHELL`
